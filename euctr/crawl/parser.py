@@ -96,6 +96,28 @@ def parse_record(res):
     value = _parse_list(table, kpath, vpath, first)
     data.update({key: value})
 
+    # E
+
+    key = 'meds'
+    ident = 'section-e'
+    kpath = '.second'
+    vpath = '.second+.third'
+    first = 'version'
+    table = _select_table(res, ident)
+    value = _parse_list(table, kpath, vpath, first)
+    data.update({key: value})
+
+    # F
+
+    key = 'population'
+    ident = 'section-f'
+    kpath = '.second'
+    vpath = '.second+.third'
+    first = 'trial_has_subjects_under_18xxx'
+    table = _select_table(res, ident)
+    value = _parse_list(table, kpath, vpath, first)
+    data.update({key: value})
+
     # E. General Information on the Trial
 
     ident = 'section-e'
